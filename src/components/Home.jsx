@@ -16,6 +16,10 @@ const Home = () => {
         {title: 'web dev top tips', body: 'lorem ipsum...', author: 'detumo', id: 3}
     ])
     
+    const handleDelete = (id) => {
+        const newBlogs = blogs.filter(blog => blog.id !== id)
+        setBlogs(newBlogs)
+    }
 
     // const handleClickAgain = () => {
     //     console.log(`hello $name`)
@@ -24,7 +28,7 @@ const Home = () => {
   return (
        <div className="home mx-w-[600px] my-10 mx-auto p-5">
         <BlogList blogs={blogs} title="All blogs"/>
-        <BlogList blogs={blogs.filter((blog) => blog.author === 'detumo')} title="Detumo's blogs"/>
+        <BlogList blogs={blogs.filter((blog) => blog.author === 'detumo')} title="Detumo's blogs" handleDelete={handleDelete}/>
                 {/* <p>{name} is { age }</p>
                 <button onClick={handleClick}>click me</button>
             <button onClick={() => handleClickAgain('mario')}>click me again</button> */}
