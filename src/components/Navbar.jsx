@@ -1,4 +1,4 @@
-
+import { Link} from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -6,8 +6,8 @@ const Navbar = () => {
         <h1 className="text-pink-500 font-extrabold text-xl">DTND Blog</h1>
 
         <div className="links ml-auto">
-            <a href="/" className="ml-4 p-2 hover:bg-pink-600 hover:text-white rounded-xl">Home</a>
-            <a href="/" className="ml-4 p-2 hover:bg-pink-600 hover:text-white rounded-xl">New Blog</a>
+            <Link to="/" className="ml-4 p-2 hover:bg-pink-600 hover:text-white rounded-xl">Home</Link>
+            <Link to="/create" className="ml-4 p-2 hover:bg-pink-600 hover:text-white rounded-xl">New Blog</Link>
         </div>
     </nav>
   )
